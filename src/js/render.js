@@ -17,7 +17,7 @@ const settingAbout = (z) => {
         <a href="https://twitter.com/raifcoonjah" target="_blank">By <i class="la la-twitter"></i> Raif Coonjah</a>
       </p>
       <p style="text-align:center;">
-        <a class="version-text green_background" href="https://github.com/raifcoonjah/Saturn-startpage/releases/" target="_blank">7.2.2</a>
+        <a class="version-text green_background" href="https://github.com/raifcoonjah/Saturn-startpage/releases/" target="_blank">Legacy</a>
       </p>
       <div class="socials">
         <a href="https://saturnstartpage.netlify.app/" class="aboutwidgets-container">Get other versions <i class="las la-external-link-alt"></i></a>
