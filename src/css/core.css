@@ -26,12 +26,13 @@
 
 html, body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--spager-background);
-  color: var(--spager-text);
+  background-color: var(--spager-background); /* This is a static background color, when a wallpaper is set it is overlapped" */
+  color: #ffff;
   height: 100%;
   margin: 0;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden; /* hide scrollbar, this is a *hack* for now. */ 
 }
 
 .main_section {
@@ -39,14 +40,13 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 110vh;
-  padding-bottom: 100px;
+  height: 100vh;
   text-align: center;
 }
 
 .quote {
   font-style: italic;
-  color: var(--sat-links);
+  color: #ffffff;
 }
 
 .line{ 
@@ -68,7 +68,7 @@ html, body {
   height: 100vh;
   background-color: #121212;
   position: fixed;
-  right: -100%;
+  left: -100%;
   top: 0;
   box-shadow: 0 2px 10px rgba(17, 17, 17, 0.822);
   transition: right 0.5s ease-in-out;
@@ -77,7 +77,7 @@ html, body {
 }
 
 .sidebar.open {
-  right: 0;
+  left: 0;
 }
 
 .sidebar-trigger {
@@ -87,7 +87,7 @@ html, body {
   cursor: pointer;
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000;
   border-radius: 17px;
 }
@@ -132,7 +132,7 @@ html, body {
 ========
 */
 
-.good_morning {
+.greetings {
   font-weight: 500;
   text-align: center;
   font-size: 2rem;
@@ -148,3 +148,14 @@ html, body {
   font-weight: 700;
   font-size: 6rem;
 }
+
+.time span {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+

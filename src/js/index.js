@@ -2,28 +2,44 @@
 // ========
 // + Good Morning text +
 // ========
-const determineGreet = (hours) => {
-  const greeting = hours < 12 ? "morning" : hours < 18 ? "afternoon" : hours < 21 ? "evening" : "night";
-  const username = localStorage.getItem("user") || "";
-  document.getElementById("good_morning").innerText = `Good ${greeting}, ${username}.`;
+//
+const determineGreet = () => {
+  const hours = new Date().getHours();
+  const user = localStorage.getItem("user") || "";
+  const greeting =
+    hours < 12
+      ? "morning"
+      : hours < 18
+      ? "afternoon"
+      : hours < 21
+      ? "evening"
+      : "night";
+  document.getElementById("greetings").innerText = `Good ${greeting}, ${user}.`;
 };
 
-determineGreet(new Date().getHours());
+determineGreet();
 
+//
 // ========
 // + Time and month text +
 // ========
+//
 const getTime = () => {
   const date = new Date();
-  const min = date.getMinutes().toString().padStart(2, "0");
   const hour = date.getHours().toString().padStart(2, "0");
+  const min = date.getMinutes().toString().padStart(2, "0");
   return `${hour}<span>:</span>${min}`;
 };
 
 const getDate = () => {
   const date = new Date();
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const days = [
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+  ];
   const cmonth = months[date.getMonth()];
   const cday = days[date.getDay()];
   const cnum = date.getDate().toString().padStart(2, "0");
