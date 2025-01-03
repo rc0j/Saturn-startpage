@@ -15,23 +15,23 @@
 */
 
 /* Import Bulma CSS */
-@import url('https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css');
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Custom Styles */
 :root {
-  --spager-background: #212427;
   --spager-text: hsl(0, 0%, 95%);
 }
 
 html, body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--spager-background); /* This is a static background color, when a wallpaper is set it is overlapped" */
+  /* background-color: var(--spager-background); This is a static background color, when a wallpaper is set it is overlapped" */
   color: #ffff;
   height: 100%;
   margin: 0;
   background-size: cover;
   background-attachment: fixed;
+  background-position: 50% 50%;
   overflow: hidden; /* hide scrollbar, this is a *hack* for now. */ 
 }
 
@@ -64,20 +64,22 @@ html, body {
 */
 .sidebar {
   width: 100%;
-  max-width: 570px;
+  max-width: 400px;
   height: 100vh;
-  background-color: #121212;
+  background-color: #121212e2;
   position: fixed;
   left: -100%;
   top: 0;
-  box-shadow: 0 2px 10px rgba(17, 17, 17, 0.822);
-  transition: right 0.5s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   z-index: 999;
   overflow-y: auto;
+  padding-top: 50px;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar.open {
   left: 0;
+  backdrop-filter: blur(10px);
 }
 
 .sidebar-trigger {
@@ -90,6 +92,7 @@ html, body {
   left: 20px;
   z-index: 1000;
   border-radius: 17px;
+  border: none;
 }
 
 .settings-tab-item {
