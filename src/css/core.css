@@ -18,10 +18,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Custom Styles */
-:root {
-  --spager-text: hsl(0, 0%, 95%);
-}
 
 html, body {
   font-family: 'Inter', sans-serif;
@@ -93,7 +89,9 @@ html, body {
   z-index: 1000;
   border-radius: 17px;
   border: none;
+  transition: transform 0.3s ease-in-out;
 }
+
 
 .settings-tab-item {
   list-style: none;
@@ -161,4 +159,3 @@ html, body {
     opacity: 0;
   }
 }
-
