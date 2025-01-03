@@ -43,41 +43,6 @@
     </div>
 
     <main>
-      <!-- =+=+= Saturn Search =+=+= -->
-
-      <div class="full">
-        <div class="search_block">
-          <form
-            id="search_eng_form"
-            method="get"
-            action="https://www.google.com/search"
-          >
-            <a
-              href="javascript:void(0)"
-              class="search-engine-logo"
-              id="se_button"
-            >
-              <img
-                id="se_icon"
-                src="/assets/icons/search.svg"
-                alt="Search engine logo"
-                class="se_icon"
-                title="Change search engine.. (Ctrl + Arrow Up)"
-              />
-            </a>
-
-            <input
-              class="search-bar"
-              type="search"
-              id="search"
-              placeholder="Search with Google.."
-              autocomplete="off"
-              name="q"
-              title="Click to search (Ctrl + /)"
-            />
-          </form>
-        </div>
-      </div>
       <div class="minimalistic-ui">
         <div class="dropdown" style="float: right">
           <button class="dropbtn"><i class="las la-ellipsis-h"></i></button>
@@ -95,27 +60,6 @@
             </a>
           </div>
         </div>
-
-        <!-- =+=+= App lists + App category =+=+= -->
-        <div class="apps_list">
-          <ul class="apps-category">
-            <li class="tab-link current" data-tab="app-1">
-              <i class="lar la-grin-hearts"></i> <span>Most used</span>
-            </li>
-            <li class="tab-link" data-tab="app-2">
-              <i class="las la-graduation-cap"></i> <span>Education</span>
-            </li>
-            <li class="tab-link" data-tab="app-3">
-              <i class="las la-share-alt"></i> <span>Social media</span>
-            </li>
-            <li class="tab-link" data-tab="app-4">
-              <i class="las la-play-circle"></i> <span>Multimedia</span>
-            </li>
-          </ul>
-
-          <div id="apps_list"></div>
-          <!-- =+=+= All apps are loaded inside [render.js] =+=+= -->
-          <!-- End of app list -->
 
           <div class="tab-link fix-favorites-header">
             <!-- =+=+= Favorite v3.2 =+=+= -->
@@ -277,28 +221,6 @@
             </div>
 
             <div class="settings-background">
-              <h3><i class="las la-search"></i> Saturn Search</h3>
-              <p class="description">
-                Tip: Click the search icon to effortlessly toggle between various search providers.
-              </p>
-
-              <h3>Search provider</h3>
-              <p class="description">
-                Select your preferred search provider. 
-                Your choice will be saved and applied across all future searches.
-              </p>
-              <div class="search-engine-select">
-                <select id="searchEngine">
-                  <option value="0">Google (Default)</option>
-                  <option value="1">DuckDuckGo</option>
-                  <option value="2">Reddit</option>
-                  <option value="3">YouTube</option>
-                  <option value="4">ProtonDB</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="settings-background">
               <h3><i class="las la-hand-peace"></i> Zen mode</h3>
               <p class="description">
                 Toggle to simplify the interface by hiding non-essential elements. In this mode, 
@@ -416,11 +338,6 @@
             </div>
           </div>
 
-          <!-- Tab 5: About Section -->
-          <div id="tab5" class="tab-pane fade-in">
-            <div id="setting_about"></div>
-            <div id="k_shortcuts"></div>
-          </div>
         </div>
 
         <p class="line"></p>
@@ -440,19 +357,14 @@
       <div id="kpress_popup" class="hidden"></div>
       <!-- All the javascript needed to make saturn's core features work  -->
       <script type="text/javascript" src="./src/js/index.js"></script>
-      <!-- Main JS - File -->
-      <script type="text/javascript" src="./src/js/search.js"></script>
       <!-- Search JS - File -->
       <script type="text/javascript" src="./src/js/favorites.js"></script>
-      <!-- Favorites JS - File -->
-      <script type="text/javascript" src="./src/js/render.js"></script>
       <!-- QUOTE JS - File -->
       <script type="text/javascript" src="./src/js/quote.js"></script>
       <!-- THEMES JS - File -->
       <script type="text/javascript" src="./src/js/themes.js"></script>
       <!-- FOCUS JS - File -->
       <script type="text/javascript" src="./src/js/keyboard.js"></script>
-      <script type="text/javascript" src="./src/js/applist.js"></script>
     </main>
   </body>
 </html>
