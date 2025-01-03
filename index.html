@@ -20,9 +20,7 @@
 
     <!-- =+=+= All the CSS needed to make Saturn Work =+=+= -->
     <link rel="stylesheet" href="./src/css/core.css" />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <link rel="stylesheet" href="./src/css/anim.css" />
-    <link rel="stylesheet" href="./src/css/themes.css" />
+    <link rel="stylesheet" href="./src/css/bulma.min.css" />
   </head>
 
   <body>
@@ -39,196 +37,82 @@
 
       <!-- Sidebar -->
       <div class="sidebar">
-        <div class="settings-header">
-          <h3 class="settings-title">Settings</h3>
-        </div>
         <button id="open_settings" class="sidebar-trigger">
-          <i class="las la-cog"></i>
+          Settings
         </button>
 
-        <!-- Sidebar Tab Menu -->
-        <ul class="tab-menu">
-          <li
-            class="settings-tab-item active"
-            data-tab="tab1"
-          >
-            <i class="las la-cog"></i> General
-          </li>
-          <li
-            class="settings-tab-item"
-            data-tab="tab2"
-          >
-            <i class="las la-brush"></i> Style
-          </li>
-          <li
-            class="settings-tab-item"
-            data-tab="tab3"
-          >
-            <i class="las la-palette"></i> Themes
-          </li>
-        </ul>
-
         <div class="setting-content">
-          <!-- Tab 1: General Settings -->
-          <div id="tab1" class="tab-pane active fade-in">
-            <div class="settings-background">
-              <h3><i class="las la-user-edit"></i> Username</h3>
-              <p class="description">
-               Replace the default "null" username with your own.
-              </p>
-              <div class="username-section">
-                <input
-                  type="text"
-                  id="username_input"
-                  placeholder="Username..."
-                />
-                <button id="save" class="save-button">
-                  <i class="las la-save"></i> Apply
-                </button>
+            <h4 class="title is-4">Greetings</h4>
+            <h6 class="subtitle is-6">Type your username</h6>
+            <div class="field">
+              <div class="control">
+              <input class="input" type="text" id="username" placeholder="Username..." />
+            </div>
+            </div>
+
+            <h4 class="title is-4">Background</h4>
+            <h6 class="subtitle is-6">Set a custom background, using URL-based background will require an active internet connection.</h6>
+            <div class="field">
+              <div class="control">
+              <input type="text" class="input" id="image_url" placeholder="Enter or paste a URL" />
               </div>
             </div>
-
-            <div class="settings-background">
-              <h3><i class="las la-keyboard"></i> Kpress (Beta)</h3>
-              <p class="description">
-                Display a pop-up on the bottom right of the screen, when two or more keys are pressed
-                simultaneously.
-              </p>
-              <label class="switch">
-                <input type="checkbox" id="kpresstoggle" />
-                <span class="slider round"></span>
-              </label>
-            </div>
-
-            <div class="settings-background danger-zone">
-              <h3><i class="las la-trash-alt"></i> Reset Data</h3>
-              <p class="description">
-                Performing this action will reset Saturn to its default settings and 
-                permanently erase all saved data. 
-                This action cannot be undone.
-              </p>
-              <button
-                id="reset_button"
-                class="danger_red"
-                aria-label="Erase everything"
-              >
-                <i class="las la-trash-alt"></i> Erase everything
+            <div class="field is-grouped">
+              <div class="control">
+              <button id="delete_custom_image" class="button is-danger">
+                <i class="las la-times"></i> Delete
               </button>
-            </div>
-          </div>
-
-          <!-- Tab 2: Style Settings -->
-          <div id="tab2" class="tab-pane fade-in">
-            <div class="settings-background">
-              <h3><i class="las la-image"></i> Background</h3>
-              <p class="description">
-                You can set a custom image as your background. Please note that 
-                using a URL-based background requires an active internet connection to load the image.
-              </p>
-
-              <input
-                type="text"
-                id="image_url"
-                placeholder="Enter or paste a URL"
-              />
-              <button
-                id="copy-backgroundurl"
-                class="copy-url-button"
-                aria-label="Copy URL to clipboard"
-              >
-                <i class="las la-clipboard"></i>
+              </div>
+              <div class="control">
+              <button id="save-image" class="button is-success">
+                <i class="lar la-save"></i> Apply
               </button>
-
-              <p class="processing_bg"></p>
-
-              <label>
-                <input type="checkbox" id="force_white_color_header" />
-                <span>White font</span>
-              </label>
-
-              <div class="button-container">
-                <button id="delete_custom_image" class="danger_red">
-                  <i class="las la-times"></i> Delete
-                </button>
-                <button id="save-image" class="save-button">
-                  <i class="lar la-save"></i> Apply
-                </button>
-              </div>
-
-              <div class="settings-separator">
-                <h3>Upload Background</h3>
-                <p class="description">
-                  Uploaded images will be converted to <code>base64</code> format and stored locally.
-                </p>
-              </div>
-              <input type="file" id="imageupload" accept="image/*" />
-            </div>
-
-            <div class="settings-background">
-              <h3>Fonts</h3>
-              <p class="description">
-                Apply different fonts options.
-              </p>
-              <label>
-                <input type="checkbox" id="bold_text" />
-                <span>Bold Text</span>
-              </label>
-              <br />
-              <label>
-                <input type="checkbox" id="browser_font" />
-                <span>Use Sans Serif font</span>
-              </label>
-            </div>
-
-            <div class="settings-background">
-              <h3>Hide Search Bar</h3>
-              <p class="description">
-                Hide the search bar to help prevent UI clutter. Please note that, Saturn search
-                does not work when its hidden.
-              </p>
-              <label class="switch">
-                <input type="checkbox" class="hide-search" />
-                <span class="slider round"></span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Tab 3: Themes -->
-          <div id="tab3" class="tab-pane fade-in">
-            <div class="settings-background">
-              <h3><i class="las la-palette"></i> Themes</h3>
-              <p class="description">
-                Choose a theme to match your mood and style.
-              </p>
-              <div id="themes-container">
-                <!-- Themes will be dynamically generated here -->
               </div>
             </div>
-          </div>
+
+            <p class="processing_bg"></p>
+
+            <h4 class="title is-4">Upload Background</h4>
+            <h6 class="subtitle is-6">
+              Uploaded images will be converted to <code>base64</code> format and stored locally.
+            </h6>
+            <div class="file has-name">
+              <label class="file-label">
+              <input class="file-input" type="file" id="imageupload" accept="image/*" />
+              <span class="file-cta">
+                <span class="file-icon">
+                <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                Choose a file…
+                </span>
+              </span>
+              <span class="file-name">
+                No file uploaded
+              </span>
+              </label>
+            </div>
+
+            <h4 class="title is-4"><i class="las la-trash-alt"></i> Erase Data</h4>
+            <h6 class="subtitle is-6">
+              Performing this action will reset Saturn to its default settings and 
+              permanently erase all saved data. 
+              This action cannot be undone.</h6>
+            <div class="field">
+              <div class="control">
+              <button id="reset_button" class="button is-danger" aria-label="Erase Data">Erase Data...
+              </button>
+              </div>
+            </div>
 
         </div>
-
-        <p class="line"></p>
-        <p
-          class="description"
-          style="text-align: center; font-weight: 500; font-size: 13px"
-        >
-          <a
-            href="https://github.com/mraif13/Saturn-startpage/issues/new"
-            target="_blank"
-            ><i class="las la-bug"></i>
-            Report a bug
-          </a>
-        </p>
       </div>
-
-      <div id="kpress_popup" class="hidden"></div>
       <!-- All the javascript needed to make saturn's core features work  -->
       <script type="text/javascript" src="./src/js/index.js"></script>
+      <script type="text/javascript" src="./src/js/background.js"></script>
       <!-- QUOTE JS - File -->
-      <script type="text/javascript" src="./src/js/quote.js"></script>
-      <!-- FOCUS JS - File -->
-      <script type="text/javascript" src="./src/js/keyboard.js"></script>
+      <!-- <script type="text/javascript" src="./src/js/quote.js"></script>
+      <!-- <script type="text/javascript" src="./src/js/keyboard.js"></script>  -->
     </main>
   </body>
 </html>
