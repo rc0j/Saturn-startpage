@@ -2,81 +2,37 @@
 // ========
 // + Good Morning text +
 // ========
-//
-const determineGreet = (hours) =>
-  (document.getElementById("good_morning").innerText =
-    `Good ${
-      hours < 12
-        ? "morning, "
-        : hours < 18
-        ? "afternoon, "
-        : hours < 21
-        ? "evening, "
-        : "night, "
-    } ` +
-    localStorage.getItem("user") +
-    `.`);
+const determineGreet = (hours) => {
+  const greeting = hours < 12 ? "morning" : hours < 18 ? "afternoon" : hours < 21 ? "evening" : "night";
+  const username = localStorage.getItem("user") || "";
+  document.getElementById("good_morning").innerText = `Good ${greeting}, ${username}.`;
+};
 
-// Get month:
 determineGreet(new Date().getHours());
 
-//
 // ========
 // + Time and month text +
 // ========
-//
-function getTime() {
-  let date = new Date(),
-    min = date.getMinutes(),
-    hour = date.getHours();
-  return (
-    "" +
-    (hour < 10 ? "0" + hour : hour) +
-    "<span>:</span>" +
-    (min < 10 ? "0" + min : min)
-  );
-}
+const getTime = () => {
+  const date = new Date();
+  const min = date.getMinutes().toString().padStart(2, "0");
+  const hour = date.getHours().toString().padStart(2, "0");
+  return `${hour}<span>:</span>${min}`;
+};
 
-function getDate() {
-  let date = new Date(),
-    months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ],
-    cmonth = months[date.getMonth()],
-    days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    cday = days[date.getDay()],
-    cnum = date.getDate();
-  if (cnum < 10) {
-    cnum = "0" + cnum;
-  }
-  return " " + cday + ", " + cnum + " " + cmonth;
-}
-// Set up the date only
+const getDate = () => {
+  const date = new Date();
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const cmonth = months[date.getMonth()];
+  const cday = days[date.getDay()];
+  const cnum = date.getDate().toString().padStart(2, "0");
+  return `${cday}, ${cnum} ${cmonth}`;
+};
+
 document.getElementById("date").innerHTML = getDate();
-
-// Set up the clock only
 document.getElementById("time").innerHTML = getTime();
 
-// Reload time after a certain amount of time.
 setInterval(() => {
   document.getElementById("time").innerHTML = getTime();
 }, 60 * 1000);

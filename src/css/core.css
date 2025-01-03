@@ -16,6 +16,7 @@
 
 /* Import Bulma CSS */
 @import url('https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Custom Styles */
 :root {
@@ -24,20 +25,23 @@
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--spager-background);
   color: var(--spager-text);
   height: 100%;
   margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.header {
+.main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  padding-bottom: 100px;
   text-align: center;
-  padding: 20px;
-}
-
-.date, .time, .greeting, .quote {
-  margin-bottom: 10px;
 }
 
 .quote {
@@ -45,15 +49,11 @@ html, body {
   color: var(--sat-links);
 }
 
-.time span {
-  color: var(--sat-accent-color1);
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+.line{ 
+  border-top: 2px solid #d7d7d7e7;
+  width: 12%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* 
@@ -135,33 +135,16 @@ html, body {
 .good_morning {
   font-weight: 500;
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .date {
   font-weight: 700;
-  text-align: center;
-  font-size: 55px;
+  font-size: 3rem;
 }
 
 .time {
   font-weight: 700;
-  text-align: center;
-  font-size: 85px;
-  margin-bottom: -10px;
-  margin-top: -30px;
+  font-size: 6rem;
 }
-
-.time span {
-  color: var(--sat-accent-color1);
-  animation: blinker 1s linear infinite;
-}
-
-/* New blinker effect! */
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
