@@ -1,0 +1,38 @@
+name: test-extention
+
+on:
+    push:
+        branches:
+            - saturn8
+    pull_request:
+        branches:
+            - saturn8
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+            uses: actions/checkout@v2
+
+        - name: Set up Node.js
+            uses: actions/setup-node@v2
+            with:
+                node-version: '14'
+
+        - name: Install dependencies
+            run: |
+                sudo apt update
+                sudo apt install -y wget git npm nodejs unzip
+                npm install -g minify
+                rm license README.md .prettierignore
+                rm -rf .git
+
+        - name: Install web-ext
+          run: |
+            npm install --global web-ext
+
+        - name: Check extention linting
+            run: |
+                web-ext lint --source-dir StartPager
