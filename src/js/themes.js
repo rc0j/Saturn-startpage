@@ -99,14 +99,6 @@ const themesData = [
     name: "Terminal",
   },
   {
-    id: "linkin-park",
-    iconSrc: "/assets/img/themes/rock-legend.png",
-    loading: "lazy",
-    title: "Experimental theme",
-    alt: "experimental-icon.png",
-    name: "Linkin Park",
-  },
-  {
     id: "lightplusplus",
     iconSrc: "/assets/img/themes/light.png",
     loading: "lazy",
@@ -144,7 +136,6 @@ const themesData = [
           "space",
           "halloween",
           "amazinglypurple",
-          "linkin-park",
           "lighterdarktheme",
           "dracula",
           "nord",

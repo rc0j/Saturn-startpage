@@ -26,9 +26,6 @@
     <link rel="stylesheet" href="./src/css/themes.css" />
     <link rel="stylesheet" href="assets/icons/css/line-awesome.min.css" />
     <link rel="stylesheet" href="./src/css/tootik.min.css" />
-
-    <!-- =+=+= jQuery [v3.7.0] =+=+= -->
-    <script src="./src/js/jquery.js"></script>
   </head>
 
   <body>
@@ -43,113 +40,7 @@
     </div>
 
     <main>
-      <div class="minimalistic-ui">
-        <div class="dropdown" style="float: right">
-          <button class="dropbtn"><i class="las la-ellipsis-h"></i></button>
-          <div class="dropdown-content">
-            <a href="#" target="_blank">
-              <i class="las la-plus-square"></i>
-              New window</a
-            >
-            <a
-              class="dropdown_redaccent"
-              href="https://github.com/mraif13/Saturn-startpage/issues/new"
-              target="_blank"
-              ><i class="las la-bug"></i>
-              Report bug...
-            </a>
-          </div>
         </div>
-
-          <div class="tab-link fix-favorites-header">
-            <!-- =+=+= Favorite v3.2 =+=+= -->
-            <div id="fav-container" class="fav-container">
-              <div id="content">
-                <div class="favorites-search">
-                  <input
-                    type="text"
-                    placeholder="Find favorites.."
-                    id="searchfavorites"
-                  />
-                  <button
-                    class="favorite-button"
-                    title="Add favorites (Shift + Z)"
-                  >
-                    <i class="las la-plus"></i> Add
-                  </button>
-                </div>
-                <p
-                  style="display: none"
-                  id="search-results"
-                  class="search-results"
-                >
-                  <span id="search-results-text"></span>
-                </p>
-                <ul id="fav-link"></ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =+=+= Favorites Modal =+=+= -->
-      <div id="fav_modal" class="fav_modal">
-        <div class="favorites_modal_content">
-          <p class="settings-item-title" style="margin-top: 5px">Favorites</p>
-          <p class="settings-item-under-title description">
-            Add your favorite websites & more.
-            <a
-              href="https://github.com/mraif13/Saturn-startpage/wiki/Favorites-feature"
-              target="_blank"
-              style="color: var(--sat-accent-color1)"
-              >Learn more...
-            </a>
-          </p>
-
-          <!-- =+=+= Input ++ Favorite title =+=+=-->
-          <label class="fav_title"> Link title</label>
-          <input
-            id="title"
-            placeholder="Enter a title"
-            autocomplete="off"
-            spellcheck="false"
-            class="favorite-input"
-            type="text"
-          />
-          <p
-            class="small_text"
-            style="
-              color: var(--sat-lighter-ids);
-              margin-bottom: -20px;
-              font-size: 13px;
-            "
-          >
-            <i class="las la-exclamation-circle"></i> Icons may take a few
-            seconds to appear.
-          </p>
-          <br />
-          <!-- =+=+= Input ++ Favorite URL =+=+= -->
-          <label class="fav_title">URL</label>
-          <input
-            id="url"
-            placeholder="Enter or paste a URL"
-            autocomplete="off"
-            spellcheck="false"
-            class="favorite-input"
-          />
-          <div class="button-container">
-            <button id="cancel-fav-btn" class="cancel-fav-btn danger_red">
-              <i class="las la-times"></i> Cancel
-            </button>
-            <button id="add" class="save-button">
-              <i class="lar la-save"></i> Save
-            </button>
-          </div>
-        </div>
-
-        <!-- =+=+= Save message =+=+= -->
-        <div id="saveMsgBar">Favorites added</div>
-      </div>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -179,12 +70,6 @@
             data-tab="tab3"
           >
             <i class="las la-palette"></i> Themes
-          </li>
-          <li
-            class="settings-tab-item"
-            data-tab="tab5"
-          >
-            <i class="las la-info-circle"></i> About
           </li>
         </ul>
 
@@ -216,18 +101,6 @@
               </p>
               <label class="switch">
                 <input type="checkbox" id="kpresstoggle" />
-                <span class="slider round"></span>
-              </label>
-            </div>
-
-            <div class="settings-background">
-              <h3><i class="las la-hand-peace"></i> Zen mode</h3>
-              <p class="description">
-                Toggle to simplify the interface by hiding non-essential elements. In this mode, 
-                you'll rely on keyboard shortcuts for quick navigation to different websites.
-              </p>
-              <label class="switch">
-                <input type="checkbox" id="toggle_minimalistic_mode" />
                 <span class="slider round"></span>
               </label>
             </div>
@@ -357,8 +230,6 @@
       <div id="kpress_popup" class="hidden"></div>
       <!-- All the javascript needed to make saturn's core features work  -->
       <script type="text/javascript" src="./src/js/index.js"></script>
-      <!-- Search JS - File -->
-      <script type="text/javascript" src="./src/js/favorites.js"></script>
       <!-- QUOTE JS - File -->
       <script type="text/javascript" src="./src/js/quote.js"></script>
       <!-- THEMES JS - File -->

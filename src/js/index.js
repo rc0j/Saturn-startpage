@@ -81,72 +81,6 @@ setInterval(() => {
   document.getElementById("time").innerHTML = getTime();
 }, 60 * 1000);
 
-
-//
-// ========
-// + Favorites Modal +
-// ========
-//
-
-var favModal = document.querySelector(".fav_modal");
-var FavBtntrigger = document.querySelector(".favorite-button");
-var closeFavoritesButton = document.querySelector(".cancel-fav-btn");
-
-function toggleFavorites() {
-  favModal.classList.toggle("show-favorite-modal");
-}
-
-function windowOutclick2(event) {
-  if (event.target === favModal) {
-    toggleFavorites();
-  }
-}
-
-FavBtntrigger.addEventListener("click", toggleFavorites);
-closeFavoritesButton.addEventListener("click", toggleFavorites);
-window.addEventListener("click", windowOutclick2);
-
-//
-// ========
-// + Hide searchbar +
-// ========
-//
-$(function () {
-  var status = localStorage.getItem("search_hidden");
-  if (status == "true") {
-    $(".search_block").css("display", "none");
-    $(".hide-search").attr("checked", true);
-  } else {
-    $(".search_block").css("display", "block");
-    $(".hide-search").attr("checked", false);
-  }
-  $(".hide-search").click(function () {
-    if (this.checked) {
-      $(".search_block").hide();
-    } else {
-      $(".search_block").show();
-    }
-    localStorage.setItem("search_hidden", this.checked);
-  });
-});
-
-//
-// ========
-// + App list category +
-// ========
-//
-$(document).ready(function () {
-  $("ul.apps-category li").click(function () {
-    var tab_id = $(this).attr("data-tab");
-
-    $("ul.apps-category li").removeClass("current");
-    $(".app-content").removeClass("current");
-
-    $(this).addClass("current");
-    $("#" + tab_id).addClass("current");
-  });
-});
-
 //
 // ========
 // + Username feature v2 +
@@ -343,35 +277,6 @@ document.querySelector("#browser_font").addEventListener("click", function () {
 
 if (localStorage.getItem("browser_font")) {
   document.querySelector("body").style.fontFamily = "sans-serif";
-}
-
-// Minimalistic UI
-
-const minimalisticButton = document.querySelector("#toggle_minimalistic_mode");
-const minimalisticUi = document.querySelector(".minimalistic-ui");
-const satHeader = document.querySelector(".sat-header");
-
-minimalisticButton.addEventListener("click", () => {
-  if (minimalisticButton.checked) {
-    minimalisticUi.style.display = "none";
-    satHeader.style.paddingTop = "30vh";
-    satHeader.style.fontSize = "23px";
-    localStorage.setItem("minimalisticUiDisplay", "none");
-  } else {
-    location.reload();
-    localStorage.removeItem("minimalisticUiDisplay");
-  }
-});
-
-const minimalisticCheck = localStorage.getItem("minimalisticUiDisplay");
-if (minimalisticCheck) {
-  minimalisticUi.style.display = minimalisticCheck;
-  minimalisticButton.checked = minimalisticCheck === "none";
-
-  if (minimalisticUi.style.display === "none") {
-    satHeader.style.paddingTop = "30vh";
-    satHeader.style.fontSize = "23px";
-  }
 }
 
 document.getElementById("open_settings").addEventListener("click", function () {
