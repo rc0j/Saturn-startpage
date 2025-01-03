@@ -6,29 +6,19 @@
 =/=/=/=/=/=/=
 */
 
-/* 
-=/=/=/SATURN STARTPAGE=/=/=/=
-+ core.css +
-+ This file contains all the core css need to make Saturn work properly. 
-+ Version: v31.12.2021 +
-=/=/=/=/=/=/=
-*/
-
 /* Import Bulma CSS */
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
 html, body {
   font-family: 'Inter', sans-serif;
-  /* background-color: var(--spager-background); This is a static background color, when a wallpaper is set it is overlapped" */
   color: #ffff;
   height: 100%;
   margin: 0;
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 50%;
-  overflow: hidden; /* hide scrollbar, this is a *hack* for now. */ 
+  overflow: hidden;
 }
 
 .main_section {
@@ -79,53 +69,16 @@ html, body {
 }
 
 .sidebar-trigger {
-  background: none;
-  color: #ffffff;
-  font-size: 1.7rem;
-  cursor: pointer;
+  font-size: 1.2rem;
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 1000;
-  border-radius: 17px;
-  border: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-
-.settings-tab-item {
-  list-style: none;
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #262a2e;
-  cursor: pointer;
-  font-size: 15px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.settings-tab-item.active {
-  background-color: rgba(61, 173, 233, 0.158);
-  border: 1px solid hsl(208, 67%, 56%);
-  box-shadow: 0 0 8px rgba(61, 173, 233, 0.284);
-}
-
-.settings-tab-item:hover {
-  background-color: rgba(61, 173, 233, 0.284);
 }
 
 .setting-content {
   padding: 20px;
 }
-
-.tab-pane {
-  display: none;
-}
-
-.tab-pane.active {
-  display: block;
-}
-
 
 /* 
 ========
