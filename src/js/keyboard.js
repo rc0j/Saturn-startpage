@@ -16,9 +16,13 @@ const shortcuts = {
 };
 
 document.addEventListener("keydown", function (event) {
-  if (event.key in shortcuts) {
+  if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName) || document.activeElement.isContentEditable) {
+    return;
+  }
+
+  const url = shortcuts[event.key];
+  if (url) {
     console.log(`Shortcut key pressed: ${event.key}`);
-    window.location.replace(shortcuts[event.key]);
+    window.location.replace(url);
   }
 });
-

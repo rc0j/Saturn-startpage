@@ -2,12 +2,12 @@
   "manifest_version": 3,
   "name": "Start Pager",
   "short_name": "startpager",
-  "version": "7.80.2025.03.01",
+  "version": "7.80.0",
   "description": "Free, open-source new tab focused on being zen.",
   "author": "Raif Coonjah (rc0j)",
 
   "icons": {
-    "64": "/assets/img/icon64.png"
+    "48": "/assets/img/icon48.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
