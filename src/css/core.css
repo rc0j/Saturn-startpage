@@ -17,7 +17,6 @@
 
 html, body {
   font-family: 'Inter', sans-serif;
-  color: #ffff;
   height: 100%;
   margin: 0;
   background-size: cover;
@@ -33,6 +32,7 @@ html, body {
   align-items: center;
   height: 100vh;
   text-align: center;
+  color: #ffffff;
 }
 
 .quote {
@@ -57,7 +57,7 @@ html, body {
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background-color: #121212e2;
+  background-color: var(--bulma-scheme-main);
   position: fixed;
   left: -100%;
   top: 0;
