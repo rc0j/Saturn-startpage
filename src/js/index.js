@@ -49,9 +49,26 @@ const getDate = () => {
 document.getElementById("date").innerHTML = getDate();
 document.getElementById("time").innerHTML = getTime();
 
-setInterval(() => {
+// Update time immediately and then every minute
+const updateTime = () => {
   document.getElementById("time").innerHTML = getTime();
-}, 60 * 1000);
+};
+
+// Calculate the delay until the next minute
+const calculateDelay = () => {
+  const now = new Date();
+  return (60 - now.getSeconds()) * 1000;
+};
+
+const scheduleUpdate = () => {
+  updateTime();
+  setTimeout(() => {
+    updateTime();
+    setInterval(updateTime, 60000);
+  }, calculateDelay());
+};
+
+scheduleUpdate();
 
 //
 // ========
