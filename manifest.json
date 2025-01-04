@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Start Pager",
   "short_name": "startpager",
   "version": "7.80.0",
@@ -7,7 +7,8 @@
   "author": "Raif Coonjah (rc0j)",
 
   "icons": {
-    "48": "/assets/img/icon48.png"
+    "48": "/assets/img/icon48.png",
+    "96": "/assets/img/icon96.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
@@ -17,7 +18,7 @@
     "homepage": "index.html"
   },
 
-  "browser_specific_settings": {
+  "applications": {
     "gecko": {
       "id": "{aa7b057d-721f-4ed8-ae73-563f767006ee}",
       "update_url": "https://raw.githubusercontent.com/rc0j/Saturn-startpage/master/updates_v8.json"
@@ -25,7 +26,5 @@
   },
 
   "permissions": ["storage"],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  }
+  "content_security_policy": "script-src 'self'; object-src 'self';"
 }
