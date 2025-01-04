@@ -1,3 +1,12 @@
+```shell
+   _____ __             __     ____                       
+  / ___// /_____ ______/ /_   / __ \____ _____ ____  _____
+  \__ \/ __/ __ `/ ___/ __/  / /_/ / __ `/ __ `/ _ \/ ___/
+ ___/ / /_/ /_/ / /  / /_   / ____/ /_/ / /_/ /  __/ /    
+/____/\__/\__,_/_/   \__/  /_/    \__,_/\__, /\___/_/     
+                                       /____/
+```
+
 ## What is StartPager (.previously Saturn Startpage)?
 StartPager is an open-source, community-driven new tab replacement designed for **speed** and **simplicity**. Originally built for personal use, I decided to open-source it to share the experience with others.
 
