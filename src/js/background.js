@@ -1,9 +1,10 @@
-//
-// ========
-// + *New* Wallpaper Feature +
-// + v2 +
-// ========
-//
+//     __                  __                                          __      _      
+//    / /_   ____ _ _____ / /__ ____ _ _____ ____   __  __ ____   ____/ /     (_)_____
+//   / __ \ / __ `// ___// //_// __ `// ___// __ \ / / / // __ \ / __  /     / // ___/
+//  / /_/ // /_/ // /__ / ,<  / /_/ // /   / /_/ // /_/ // / / // /_/ /_    / /(__  ) 
+// /_.___/ \__,_/ \___//_/|_| \__, //_/    \____/ \__,_//_/ /_/ \__,_/(_)__/ //____/  
+//                           /____/                                     /___/         
+
 const imageUrlInput = document.querySelector("#image_url");
 const processingBg = document.querySelector(".processing_bg");
 const background_body = document.querySelector("body");

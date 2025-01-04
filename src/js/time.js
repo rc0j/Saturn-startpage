@@ -1,8 +1,10 @@
-//
-// ========
-// + Good Morning text +
-// ========
-//
+//    __   _                        _      
+//   / /_ (_)____ ___   ___        (_)_____
+//  / __// // __ `__ \ / _ \      / // ___/
+// / /_ / // / / / / //  __/_    / /(__  ) 
+// \__//_//_/ /_/ /_/ \___/(_)__/ //____/  
+//                           /___/           
+
 const determineGreet = () => {
     const hours = new Date().getHours();
     const user = localStorage.getItem("user") || "";

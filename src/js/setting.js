@@ -1,8 +1,9 @@
-//
-// ========
-// + *New* Reset button  +
-// ========
-//
+//                 __   __   _                     _      
+//    _____ ___   / /_ / /_ (_)____   ____ _      (_)_____
+//   / ___// _ \ / __// __// // __ \ / __ `/     / // ___/
+//  (__  )/  __// /_ / /_ / // / / // /_/ /_    / /(__  ) 
+// /____/ \___/ \__/ \__//_//_/ /_/ \__, /(_)__/ //____/  
+//                                 /____/   /___/         
 
 document.getElementById("reset_button").addEventListener("click", resetData);
 
@@ -31,29 +32,3 @@ document.addEventListener("click", function (event) {
     sidebar.classList.remove("open");
   }
 });
-
-// Get all tab items
-const tabItems = document.querySelectorAll(".settings-tab-item");
-
-// Get all tab content panes
-const tabPanes = document.querySelectorAll(".tab-pane");
-
-// Function to switch tabs
-function switchTab(event) {
-  // Remove 'active' class from all tab items and panes
-  tabItems.forEach((item) => item.classList.remove("active"));
-  tabPanes.forEach((pane) => pane.classList.remove("active"));
-
-  // Add 'active' class to the clicked tab item
-  this.classList.add("active");
-
-  // Get the target tab pane based on data-tab attribute
-  const targetPaneId = this.getAttribute("data-tab");
-  const targetPane = document.getElementById(targetPaneId);
-
-  // Add 'active' class to the target tab pane
-  targetPane.classList.add("active");
-}
-
-// Add click event listener to each tab item
-tabItems.forEach((item) => item.addEventListener("click", switchTab));

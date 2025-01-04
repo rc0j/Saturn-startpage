@@ -1,12 +1,17 @@
-/* 
-=/=/=/SATURN STARTPAGE=/=/=/=
-+ core.css +
-+ This file contains all the core css need to make Saturn work properly. 
-+ Version: v31.12.2021 +
-=/=/=/=/=/=/=
-*/
+/*                                               
+  _____ ____   _____ ___     _____ _____ _____
+ / ___// __ \ / ___// _ \   / ___// ___// ___/
+/ /__ / /_/ // /   /  __/_ / /__ (__  )(__  ) 
+\___/ \____//_/    \___/(_)\___//____//____/  
+                                               */
 
-/* Import Bulma CSS */
+
+
+/* 
+========
+ + Import +
+========
+*/
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
