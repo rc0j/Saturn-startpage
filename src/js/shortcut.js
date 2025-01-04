@@ -22,6 +22,11 @@ document.addEventListener("keydown", function (event) {
     return;
   }
 
+  if (event.shiftKey && event.key === 'S') {
+    document.querySelector('.sidebar-trigger').click();
+    return;
+  }
+
   const url = shortcuts[event.key];
   if (url) {
     console.log(`Shortcut key pressed: ${event.key}`);

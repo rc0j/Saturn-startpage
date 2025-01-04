@@ -66,6 +66,7 @@ html, body {
   z-index: 999;
   overflow-y: auto;
   padding-top: 50px;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar.open {
@@ -74,15 +75,15 @@ html, body {
 }
 
 .sidebar-trigger {
-  font-size: 1rem;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
+  position: absolute; 
+  top: 10px; 
+  left: 10px;
+  color: #00d1b2; /* Bulma primary color */
 }
 
 .setting-content {
   padding: 20px;
+  margin-top: -50px;
 }
 
 /* 

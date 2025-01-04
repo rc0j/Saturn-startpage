@@ -28,12 +28,12 @@
     </div>
 
     <main>
-      <button id="open_settings" class="sidebar-trigger">
-        Settings
-      </button>
+      <button id="open_settings" class="button is-dark is-rounded is-small sidebar-trigger"></button>
       <!-- Sidebar -->
       <div class="sidebar">
         <div class="setting-content">
+            <button id="close_sidebar" class="delete is-medium is-pulled-right"></button>
+          </button>
             <h4 class="title is-4">Greetings</h4>
             <h6 class="subtitle is-6">Type your username</h6>
             <div class="field">
@@ -106,10 +106,11 @@
               <thead>
                 <tr>
                   <th>Shortcut</th>
-                  <th>URL</th>
+                  <th>URL/Action</th>
                 </tr>
               </thead>
               <tbody>
+                <tr><td>Shift + S</td><td>Open Settings</td></tr>
                 <tr><td>g</td><td><a href="https://github.com" target="_blank">https://github.com</a></td></tr>
                 <tr><td>y</td><td><a href="https://youtube.com" target="_blank">https://youtube.com</a></td></tr>
                 <tr><td>r</td><td><a href="https://reddit.com" target="_blank">https://reddit.com</a></td></tr>
