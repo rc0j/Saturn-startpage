@@ -10,9 +10,10 @@ const shortcuts = {
   r: "https://reddit.com",
   p: "https://mail.proton.me",
   t: "https://twitter.com",
-  c: "https://calendar.google.com",
+  c: "https://chatgpt.com",
   m: "https://mail.google.com",
-  i: "https://instagram.com"
+  i: "https://instagram.com",
+  G: "https://gitlab.com",
 };
 
 document.addEventListener("keydown", function (event) {
