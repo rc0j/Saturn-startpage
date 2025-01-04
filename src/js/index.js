@@ -89,18 +89,11 @@ function resetData() {
 
   if (isConfirmed) {
     const resetButton = document.getElementById("reset_button");
-    resetButton.innerHTML = `
-      <img class="loading-svg" src="/assets/img/loading-red.svg" alt="Loading">
-      <span>Data erased. Reloading in 3 seconds...</span>
-    `;
+    resetButton.classList.add("is-loading");
+    resetButton.disabled = true;
     localStorage.clear();
     setTimeout(() => location.reload(), 3000);
   }
-}
-
-
-if (localStorage.getItem("browser_font")) {
-  document.querySelector("body").style.fontFamily = "sans-serif";
 }
 
 document.getElementById("open_settings").addEventListener("click", function () {
