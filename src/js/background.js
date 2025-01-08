@@ -18,7 +18,7 @@ document.querySelector("#save-image").addEventListener("click", () => {
     return;
   }
   processingBg.innerHTML =
-    '<i class="las la-check-circle"></i> Background image has been successfully applied!';
+    '<i class="las la-check-circle"></i> Background image has been successfully applied, please reload the page to this change in effect...';
   localStorage.setItem("image_url", imageUrlValue);
   localStorage.removeItem("imageupload");
   body.style.backgroundImage = `url(${imageUrlValue})`;
@@ -30,12 +30,12 @@ inputFile.addEventListener("change", (event) => {
 
   if (image.size / 1024 / 1024 >= 4) {
     processingBg.innerHTML =
-      '<span style="color:var(--delete-warning-bg)"><i class="las la-exclamation-circle"></i> The selected image exceeds 4MB. Please choose a smaller file.</span>';
+      '<span style="color:var(--delete-warning-bg)"><i class="las la-exclamation-circle"></i>Error! The selected image exceeds 4MB. Please choose a smaller file.</span>';
     return;
   }
 
   processingBg.innerHTML =
-    '<i class="las la-check-circle"></i> Image uploaded and set as background successfully!';
+    '<i class="las la-check-circle"></i> Image uploaded and set as background successfully. Please reload the page to see this change in effect...';
   localStorage.removeItem("image_url");
 
   const reader = new FileReader();
@@ -71,6 +71,6 @@ document.querySelector("#delete_custom_image").addEventListener("click", () => {
     imageUrlInput.style.width = "100%";
     document.querySelector("#copy-backgroundurl").style.display = "none";
     processingBg.innerHTML =
-      '<i class="las la-check-circle"></i> Background image has been removed.';
+      '<i class="las la-check-circle"></i> Background image has been removed, please reload the page to see this change in effect...';
   }
 });
