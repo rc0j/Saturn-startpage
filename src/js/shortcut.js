@@ -10,7 +10,7 @@ const shortcuts = {
   y: "https://youtube.com",
   r: "https://reddit.com",
   p: "https://mail.proton.me",
-  t: "https://twitter.com",
+  x: "https://x.com",
   c: "https://chatgpt.com",
   m: "https://mail.google.com",
   i: "https://instagram.com",
@@ -26,4 +26,29 @@ document.addEventListener("keydown", function (event) {
     document.querySelector('.sidebar-trigger').click();
     return;
   }
+
+  const url = shortcuts[event.key];
+  if (url) {
+    showTooltip(`Opening ${url}...`);
+    window.location.href = url;
+  }
 });
+
+function showTooltip(message) {
+  const tooltip = document.createElement("div");
+  tooltip.className = "notification is-primary is-light";
+  tooltip.style.position = "fixed";
+  tooltip.style.bottom = "10px";
+  tooltip.style.left = "50%";
+  tooltip.style.transform = "translateX(-50%)";
+  tooltip.style.borderRadius = "12px";
+  tooltip.style.padding = "10px 20px";
+  tooltip.style.zIndex = "1000";
+  tooltip.innerText = message;
+
+  document.body.appendChild(tooltip);
+
+  setTimeout(() => {
+    tooltip.remove();
+  }, 2000);
+}
