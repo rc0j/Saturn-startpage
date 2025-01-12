@@ -79,9 +79,12 @@ const determineGreet = () => {
   //
   
   const usernameInput = document.querySelector("#username");
-  
+
   usernameInput.addEventListener("input", () => {
-    const username = usernameInput.value.trim();
+    let username = usernameInput.value.trim();
+    if (username.length > 20) {
+      username = username.substring(0, 20) + "...";
+    }
     if (username) {
       localStorage.setItem("user", username);
       determineGreet();
