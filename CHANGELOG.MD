@@ -1,5 +1,13 @@
 # Changelog
 
+## [Version 7.81.1] - 
+- Fix backgroud notification position.
+- Fix a bug that caused the browser to become unresponsive when the username exceeded 20 characters.
+- Remove debug `console.log` statements for shortcut key presses.
+- Added a "Notification" when a shortcut is pressed. (Beta)
+- Replace twitter.com -> x.com (shortcut changed to x)
+
+
 ## [Version 7.81.0] - 2025-04-01
 
 - Fix `reset_button` button.
