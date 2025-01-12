@@ -26,10 +26,4 @@ document.addEventListener("keydown", function (event) {
     document.querySelector('.sidebar-trigger').click();
     return;
   }
-
-  const url = shortcuts[event.key];
-  if (url) {
-    console.log(`Shortcut key pressed: ${event.key}`);
-    window.location.replace(url);
-  }
 });
